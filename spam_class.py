@@ -3,7 +3,7 @@ import pandas as pd
 from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.cross_validation import train_test_split
 from sklearn.naive_bayes import MultinomialNB
-
+#Naive_Bayes classifier with bag of words technique
 df=pd.read_csv('SMSSpamCollection',sep='\t',names=['status','message'])		#read the data
 df.loc[df["status"]=="ham","status"]=1								#numerical classfication
 df.loc[df["status"]=="spam","status"]=0
